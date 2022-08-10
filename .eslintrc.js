@@ -7,7 +7,6 @@ module.exports = {
     extends: [
         'eslint:recommended',
         // "plugin:react/recommended",
-        'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'prettier',
@@ -20,7 +19,8 @@ module.exports = {
         },
         ecmaVersion: 'latest',
         sourceType: 'module',
-        project: './tsconfig.json',
+        tsconfigRootDir: __dirname,
+        project: ['./tsconfig.eslint.json'],
     },
     plugins: [
         // "react",
